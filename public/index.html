@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baggage Website ✅</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f6f7fb; margin:0; }
+    .wrap { max-width: 900px; margin: 70px auto; padding: 24px; }
+    .card { background:#fff; border-radius: 14px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    h1 { margin:0 0 10px; }
+    p { margin: 0 0 18px; color:#333; line-height:1.4; }
+    a { color:#2b59ff; text-decoration:none; font-weight:600; }
+    button { padding: 12px 16px; border:0; border-radius: 10px; cursor:pointer; font-weight:600; background:#2b59ff; color:white; }
+    .grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 16px; }
+    .box { background:#f3f5ff; padding:14px; border-radius:12px; }
+    .small { font-size: 13px; color:#666; margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Baggage site is live ✅</h1>
+      <p>This is a real HTML page served from your repo: <b>/public/index.html</b></p>
+
+      <div class="grid">
+        <div class="box">
+          <b>Button Test</b><br><br>
+          <button onclick="alert('Works ✅')">Click me</button>
+        </div>
+        <div class="box">
+          <b>Status</b><br><br>
+          <div id="status">Ready ✅</div>
+        </div>
+        <div class="box">
+          <b>Next</b><br><br>
+          <a href="/about">Go to /about →</a>
+        </div>
+      </div>
+
+      <div class="small">Next step: add pages (About, Contact) and a simple form.</div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("status").textContent = "Loaded in browser ✅";
+    }, 300);
+  </script>
+</body>
+</html>
