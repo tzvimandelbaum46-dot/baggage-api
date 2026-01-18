@@ -1,66 +1,41 @@
 const express = require("express");
-
 const app = express();
-app.use(express.json());
 
-// ===== HOME ROUTE =====
 app.get("/", (req, res) => {
-  res.send("Baggage API is live ✅");
+  res.send(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My website is live ✅</title>
+        <style>
+          body { font-family: Arial, sans-serif; background:#f6f7fb; margin:0; }
+          .wrap { max-width: 720px; margin: 80px auto; padding: 24px; }
+          .card { background:white; border-radius: 14px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+          h1 { margin:0 0 10px; }
+          p { margin: 0 0 18px; color:#333; line-height:1.4; }
+          button { padding: 12px 16px; border:0; border-radius: 10px; cursor:pointer; font-weight:600; }
+          .btn { background:#2b59ff; color:white; }
+          .note { margin-top: 14px; font-size: 13px; color:#666; }
+        </style>
+      </head>
+      <body>
+        <div class="wrap">
+          <div class="card">
+            <h1>My website is live ✅</h1>
+            <p>If you can see this page, your Render deploy is working.</p>
+            <button class="btn" onclick="alert('Button works ✅')">Test Button</button>
+            <div class="note">Next step: we can add real pages, forms, etc.</div>
+          </div>
+        </div>
+      </body>
+    </html>
+  `);
 });
 
-// ===== SIMPLE HEALTH CHECK =====
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
-});
+// Optional: keep an API route if you already have one
+app.get("/health", (req, res) => res.send("OK"));
 
-// ===== QUOTE ENDPOINT =====
-app.post("/quote", (req, res) => {
-  const { pickup_address, flight_departure_local, bag_count, pickup_preference } = req.body;
-
-  if (!pickup_address || !flight_departure_local || !bag_count || !pickup_preference) {
-    return res.status(400).json({ error: "Missing required fields" });
-  }
-
-  res.json({
-    quote_id: "qt_test_123",
-    airport: "JFK",
-    distance_miles: 12.5,
-    drive_minutes: 35,
-    recommended_pickup_window: {
-      start: "2026-01-20T18:30:00-05:00",
-      end: "2026-01-20T20:30:00-05:00"
-    },
-    pricing: {
-      base: 25,
-      time_distance: 15,
-      night_before: 10,
-      per_bag: 8,
-      handler_fee: 5,
-      taxes_fees: 4
-    },
-    total_price: 67,
-    currency: "USD"
-  });
-});
-
-// ===== BOOKING ENDPOINT =====
-app.post("/create-booking", (req, res) => {
-  const { quote_id, customer_name, customer_email } = req.body;
-
-  if (!quote_id || !customer_name || !customer_email) {
-    return res.status(400).json({ error: "Missing required fields" });
-  }
-
-  res.json({
-    booking_id: "bk_test_456",
-    booking_status: "pending_payment",
-    booking_url: "https://example.com/booking/bk_test_456",
-    payment_url: "https://example.com/pay/bk_test_456"
-  });
-});
-
-// ===== START SERVER =====
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log("Server running on port", PORT);
-});
+app.listen(PORT, () => console.log("Server running on port", PORT));
