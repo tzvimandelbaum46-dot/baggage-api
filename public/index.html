@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Baggage Pickup & Delivery</title>
+  <title>Baggage Pickup & Airport Check-In Support</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
   <div class="nav">
     <div class="container nav-inner">
-      <div class="brand">Baggage <span class="badge">LIVE</span></div>
+      <div class="brand">
+        <span style="font-weight:900;">Baggage</span>
+        <span class="badge">PILOT</span>
+      </div>
       <div class="links">
-        <a href="/">Home</a>
+        <a href="#how">How it works</a>
+        <a href="#safety">Safety</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#request">Request</a>
         <a href="/about">About</a>
       </div>
     </div>
@@ -20,43 +26,183 @@
 
   <div class="container hero">
     <div class="card">
-      <h1>Airport Baggage Pickup & Delivery</h1>
-      <p>
-        Skip the hassle. We collect your luggage from your home or hotel and
-        deliver it securely to the airport — or from the airport to your door.
-      </p>
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1; min-width:260px;">
+          <h1 style="margin-bottom:8px;">Baggage pickup, without the stress.</h1>
+          <p style="font-size:16px;">
+            We collect your luggage from home or hotel and coordinate handoff to airport partners.
+            You travel lighter and move faster.
+          </p>
 
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+            <a class="btn" href="#request">Request pickup</a>
+            <a class="btn" href="#how" style="background:#e5e7eb;color:#111;">See how it works</a>
+          </div>
+
+          <div class="small" style="margin-top:12px;">
+            Pilot phase. Exact availability depends on airport + partner handling.
+          </div>
+        </div>
+
+        <div style="flex:1; min-width:260px;">
+          <div class="box" style="background:#fff; border:1px solid var(--border);">
+            <b style="display:block; margin-bottom:6px;">What this is (clear)</b>
+            <p style="margin:0 0 10px; color:var(--muted);">
+              A logistics service: pickup → secure transport → airport handoff.
+            </p>
+            <b style="display:block; margin-bottom:6px;">What this is NOT</b>
+            <p style="margin:0; color:var(--muted);">
+              Not “magic”. Not an airline. Not pretending to do check-in without approval.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:22px;">
+        <div class="box">
+          <b>Door-to-Door Pickup</b>
+          <p>Scheduled pickup window with identity check at handoff.</p>
+        </div>
+        <div class="box">
+          <b>Tracked & Sealed</b>
+          <p>Bag tags, seal numbers, and status updates (pilot).</p>
+        </div>
+        <div class="box">
+          <b>Airport Partner Handoff</b>
+          <p>Designed for partner acceptance at the airport (where permitted).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="how" style="margin-top:14px;">
+      <h2 style="margin:0 0 10px;">How it works</h2>
       <div class="grid">
         <div class="box">
-          <b>🚗 Door-to-Door</b>
-          <p>We handle transport so you travel hands-free.</p>
+          <b>1) Request</b>
+          <p>Tell us pickup address, flight date, and number of bags.</p>
         </div>
         <div class="box">
-          <b>✈️ Airport Ready</b>
-          <p>Designed to integrate with airport handling partners.</p>
+          <b>2) Pickup</b>
+          <p>We collect bags, verify identity, apply seal + tag.</p>
         </div>
         <div class="box">
-          <b>🔒 Secure</b>
-          <p>Tracked, sealed, and professionally handled.</p>
+          <b>3) Transport</b>
+          <p>Bags are moved to the airport holding/partner area.</p>
+        </div>
+        <div class="box">
+          <b>4) Handoff</b>
+          <p>Partner acceptance at airport when available (pilot).</p>
         </div>
       </div>
+    </div>
 
-      <div style="margin-top:20px;">
-        <a class="btn" href="#">Request Pickup</a>
-        <a class="btn" style="background:#e5e7eb;color:#111;margin-left:10px;" href="/about">
-          Learn More
-        </a>
+    <div class="card" id="safety" style="margin-top:14px;">
+      <h2 style="margin:0 0 10px;">Safety & trust</h2>
+      <div class="grid">
+        <div class="box">
+          <b>Chain of custody</b>
+          <p>Pickup photo/notes + seal number recorded at pickup.</p>
+        </div>
+        <div class="box">
+          <b>Handling standards</b>
+          <p>Bags remain sealed until airport handoff (where possible).</p>
+        </div>
+        <div class="box">
+          <b>Clear policies</b>
+          <p>Excluded items list + liability terms (pilot draft).</p>
+        </div>
       </div>
-
       <div class="small">
-        Currently in pilot phase. Service availability varies by city.
+        In production we’ll publish full policies and partner terms. For now this page is a pilot landing.
       </div>
+    </div>
+
+    <div class="card" id="coverage" style="margin-top:14px;">
+      <h2 style="margin:0 0 10px;">Coverage (pilot)</h2>
+      <p>Start simple: one city + one airport. Expand after reliability is proven.</p>
+      <div class="grid">
+        <div class="box">
+          <b>City</b>
+          <p>Example: New York City (pilot)</p>
+        </div>
+        <div class="box">
+          <b>Airport</b>
+          <p>Example: JFK / LGA (pilot)</p>
+        </div>
+        <div class="box">
+          <b>Operating hours</b>
+          <p>Example: 6am–10pm (pilot)</p>
+        </div>
+      </div>
+      <div class="small">We’ll replace these with your real locations when you decide them.</div>
+    </div>
+
+    <div class="card" id="request" style="margin-top:14px;">
+      <h2 style="margin:0 0 10px;">Request a pickup</h2>
+      <p style="margin-bottom:16px;">This is a simple pilot request form. It does not charge money.</p>
+
+      <form id="reqForm" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+        <div class="box" style="background:#fff;">
+          <label><b>Name</b><br>
+            <input required name="name" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div class="box" style="background:#fff;">
+          <label><b>Phone / WhatsApp</b><br>
+            <input required name="phone" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div class="box" style="background:#fff;">
+          <label><b>Pickup address (area)</b><br>
+            <input required name="address" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div class="box" style="background:#fff;">
+          <label><b>Flight date</b><br>
+            <input required name="date" type="date" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div class="box" style="background:#fff;">
+          <label><b># of bags</b><br>
+            <input required name="bags" type="number" min="1" value="1" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div class="box" style="background:#fff;">
+          <label><b>Notes (optional)</b><br>
+            <input name="notes" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-top:8px;">
+          </label>
+        </div>
+
+        <div style="grid-column:1/-1; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="btn" type="submit">Submit request</button>
+          <span id="msg" class="small"></span>
+        </div>
+      </form>
     </div>
 
     <div class="footer">
-      © Baggage • Airport luggage delivery service
+      © Baggage • Pilot landing page • <a href="/about" style="color:#94a3b8;">About</a>
     </div>
   </div>
+
+  <script>
+    const form = document.getElementById("reqForm");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // No backend yet — just a clear confirmation message.
+      msg.textContent = "Request received ✅ (pilot). Next step: connect to email/WhatsApp.";
+      form.reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => window.location.hash = "#request", 250);
+    });
+  </script>
 
 </body>
 </html>
