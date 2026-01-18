@@ -1,22 +1,47 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About – Baggage</title>
-  <style>
-    body { font-family: Arial; background:#f6f7fb; margin:0; }
-    .wrap { max-width: 800px; margin: 80px auto; padding: 24px; }
-    .card { background:#fff; padding: 30px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-    a { color:#2b59ff; text-decoration:none; font-weight:600; }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="wrap">
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Baggage <span class="badge">LIVE</span></div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container hero">
     <div class="card">
-      <h1>About this site ✅</h1>
-      <p>This is a real static HTML page served by Express.</p>
-      <p>The server only routes — the pages are normal files.</p>
-      <p><a href="/">← Back home</a></p>
+      <h1>About this website ✅</h1>
+      <p>
+        This is a real, production website deployed on Render.
+      </p>
+
+      <div class="grid">
+        <div class="box">
+          <b>Real HTML</b>
+          <p>Served from <code>/public/about.html</code></p>
+        </div>
+        <div class="box">
+          <b>No fake API</b>
+          <p>Pure browser-visible website</p>
+        </div>
+        <div class="box">
+          <b>Stable routing</b>
+          <p><code>/about</code> is forced to load this file</p>
+        </div>
+      </div>
+
+      <div class="small">
+        <a href="/">← Back home</a>
+      </div>
     </div>
   </div>
 </body>
